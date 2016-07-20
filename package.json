@@ -1,0 +1,53 @@
+{
+  "name": "whim-workspace",
+  "version": "0.0.1",
+  "description": "The main editable \"view\" of any whim tool, such as an editor or terminal.",
+  "main": "index.js",
+  "scripts": {
+    "start": "start-storybook -p 9001 -c conf/storybook",
+    "test": "tape -r babel-register 'src/**/*spec.js' | faucet",
+    "cover": "nyc -n src -x '**/*spec.js' -r text -r html -r lcov npm test",
+    "lint": "eslint -c conf/eslintrc src"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-0",
+      "react"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whimeditor/workspace.git"
+  },
+  "keywords": [
+    "whim",
+    "editor",
+    "workspace",
+    "vi",
+    "vim"
+  ],
+  "author": "Josh David Miller <josh@joshdavidmiller.com> (http://joshdavidmiller.com)",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/whimeditor/workspace/issues"
+  },
+  "homepage": "https://github.com/whimeditor/workspace#readme",
+  "devDependencies": {
+    "@kadira/storybook": "^1.38.3",
+    "babel-eslint": "^6.1.2",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-0": "^6.5.0",
+    "enzyme": "^2.4.1",
+    "eslint": "^3.1.1",
+    "eslint-plugin-react": "^5.2.2",
+    "faucet": "0.0.1",
+    "nyc": "^7.0.0",
+    "react-addons-test-utils": "^15.2.1",
+    "tape": "^4.6.0"
+  },
+  "dependencies": {
+    "react": "^15.2.1"
+  }
+}
